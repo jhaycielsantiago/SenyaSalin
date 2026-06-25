@@ -1,0 +1,78 @@
+{
+  "$schema": "https://senyasalin.org/schemas/landmark/v1",
+  "_comment": "SenyaSalin Landmark Data Schema v0.1. Defines the structure of extracted MediaPipe landmark data stored in data/processed/. Future contributors adding new modalities (pose, face) should extend this schema.",
+  "version": "0.1",
+  "description": "Schema for a single landmark recording session (one gesture instance)",
+  "example": {
+    "label": "HELP",
+    "signer_id": "signer_001",
+    "session_id": "session_20250101_001",
+    "dataset_version": "0.1",
+    "num_frames": 30,
+    "fps": 30,
+    "source": "webcam",
+    "frames": [
+      {
+        "frame_index": 0,
+        "timestamp_ms": 0,
+        "left_hand": {
+          "detected": true,
+          "landmarks": [
+            {"id": 0, "x": 0.512, "y": 0.623, "z": -0.041},
+            "... 20 more landmarks"
+          ],
+          "handedness_score": 0.98
+        },
+        "right_hand": {
+          "detected": true,
+          "landmarks": [
+            {"id": 0, "x": 0.488, "y": 0.601, "z": -0.038},
+            "... 20 more landmarks"
+          ],
+          "handedness_score": 0.97
+        }
+      }
+    ]
+  },
+  "field_definitions": {
+    "label": "Gesture class label — must exist in schemas/gestures.json",
+    "signer_id": "Anonymous signer identifier for dataset tracking",
+    "session_id": "Unique session ID for reproducibility",
+    "dataset_version": "Dataset version this recording belongs to",
+    "num_frames": "Number of frames captured in this recording",
+    "fps": "Frames per second of source video",
+    "source": "Data source: webcam | video_file | synthetic",
+    "frames[].frame_index": "Zero-based frame index",
+    "frames[].timestamp_ms": "Timestamp of this frame in milliseconds",
+    "frames[].*.detected": "Whether this hand was detected in this frame",
+    "frames[].*.landmarks": "21 MediaPipe hand landmarks, each with normalized x, y, z",
+    "frames[].*.landmarks[].id": "MediaPipe landmark ID (0=wrist, 1-4=thumb, 5-8=index, ...)",
+    "frames[].*.landmarks[].x": "Normalized x coordinate [0.0, 1.0]",
+    "frames[].*.landmarks[].y": "Normalized y coordinate [0.0, 1.0]",
+    "frames[].*.landmarks[].z": "Depth relative to wrist — smaller = closer to camera",
+    "frames[].*.handedness_score": "MediaPipe confidence that this is the correct hand"
+  },
+  "mediapipe_landmark_ids": {
+    "0": "WRIST",
+    "1": "THUMB_CMC",
+    "2": "THUMB_MCP",
+    "3": "THUMB_IP",
+    "4": "THUMB_TIP",
+    "5": "INDEX_FINGER_MCP",
+    "6": "INDEX_FINGER_PIP",
+    "7": "INDEX_FINGER_DIP",
+    "8": "INDEX_FINGER_TIP",
+    "9": "MIDDLE_FINGER_MCP",
+    "10": "MIDDLE_FINGER_PIP",
+    "11": "MIDDLE_FINGER_DIP",
+    "12": "MIDDLE_FINGER_TIP",
+    "13": "RING_FINGER_MCP",
+    "14": "RING_FINGER_PIP",
+    "15": "RING_FINGER_DIP",
+    "16": "RING_FINGER_TIP",
+    "17": "PINKY_MCP",
+    "18": "PINKY_PIP",
+    "19": "PINKY_DIP",
+    "20": "PINKY_TIP"
+  }
+}

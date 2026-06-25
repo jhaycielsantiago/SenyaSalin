@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.installed.cfg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# ML artifacts — models are versionable via DVC or releases, not git
+models/saved/*.pkl
+models/saved/*.joblib
+models/saved/*.h5
+models/saved/*.pt
+models/saved/*.pth
+models/saved/*.onnx
+
+# Raw video data — too large for git
+data/raw/**/*.mp4
+data/raw/**/*.avi
+data/raw/**/*.mov
+data/raw/**/*.mkv
+data/raw/**/*.webm
+
+# Landmark numpy files — use DVC or releases
+data/processed/**/*.npy
+data/processed/**/*.npz
+
+# Benchmark result snapshots — keep only curated ones
+benchmark/results/run_*/
+
+# Notebooks
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Frontend
+app/frontend/node_modules/
+app/frontend/dist/
+app/frontend/.next/
+app/frontend/build/
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log
+logs/
+
+# gTTS cache
+*.mp3
+audio_cache/

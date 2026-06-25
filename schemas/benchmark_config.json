@@ -1,0 +1,40 @@
+{
+  "$schema": "https://senyasalin.org/schemas/benchmark/v1",
+  "_comment": "SenyaSalin Benchmark Configuration v0.1. Defines reproducible benchmark parameters, split ratios, and metrics. Version this file alongside dataset releases.",
+  "version": "0.1",
+  "benchmark_name": "SenyaSalin-FSL-v0.1",
+  "description": "Baseline benchmark for 15-class FSL gesture recognition using MediaPipe hand landmarks",
+  "dataset": {
+    "version": "0.1",
+    "num_classes": 15,
+    "gestures": [
+      "HELP", "WATER", "PAIN", "THANK_YOU", "YES",
+      "NO", "STOP", "TOILET", "FOOD", "MEDICINE",
+      "UNDERSTAND", "REPEAT", "NAME", "CALL", "OKAY"
+    ],
+    "split": {
+      "train": 0.70,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "split_strategy": "stratified",
+    "random_seed": 42
+  },
+  "metrics": {
+    "primary": "accuracy",
+    "reported": [
+      "accuracy",
+      "precision_weighted",
+      "recall_weighted",
+      "f1_weighted",
+      "inference_time_ms_mean",
+      "inference_time_ms_p95"
+    ]
+  },
+  "baseline_models": ["knn", "random_forest", "mlp"],
+  "evaluation": {
+    "cross_validation_folds": 5,
+    "report_confusion_matrix": true,
+    "report_per_class_metrics": true
+  }
+}

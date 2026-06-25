@@ -1,0 +1,158 @@
+{
+  "$schema": "https://senyasalin.org/schemas/mappings/v1",
+  "_comment": "SenyaSalin Intent-to-Phrase Mapping v0.1 — CC BY 4.0. Maps accessibility intents to natural language outputs in multiple registers. Add languages by adding a new key under each intent entry.",
+  "version": "0.1",
+  "supported_languages": ["tagalog", "taglish", "english"],
+  "intents": {
+    "request_assistance": {
+      "tagalog": "Kailangan ko po ng tulong.",
+      "taglish": "Kailangan ko po ng tulong.",
+      "english": "I need help.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "request_water": {
+      "tagalog": "Pwede po bang humingi ng tubig?",
+      "taglish": "Pwede po bang humingi ng tubig?",
+      "english": "May I have some water?",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "medical_discomfort": {
+      "tagalog": "Masakit po ito.",
+      "taglish": "Masakit po ito.",
+      "english": "I am in pain.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "express_gratitude": {
+      "tagalog": "Maraming salamat po.",
+      "taglish": "Maraming salamat po.",
+      "english": "Thank you very much.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "affirmation": {
+      "tagalog": "Oo po.",
+      "taglish": "Oo po.",
+      "english": "Yes.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "negation": {
+      "tagalog": "Hindi po.",
+      "taglish": "Hindi po.",
+      "english": "No.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "request_stop": {
+      "tagalog": "Tigil po.",
+      "taglish": "Tigil po, please.",
+      "english": "Please stop.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "request_restroom": {
+      "tagalog": "Nasaan po ang CR?",
+      "taglish": "Nasaan po ang CR?",
+      "english": "Where is the restroom?",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "request_food": {
+      "tagalog": "Gutom na po ako.",
+      "taglish": "Gutom na po ako.",
+      "english": "I am hungry.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "request_medicine": {
+      "tagalog": "Kailangan ko po ng gamot.",
+      "taglish": "Kailangan ko po ng gamot.",
+      "english": "I need medicine.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "express_understanding": {
+      "tagalog": "Naiintindihan ko po.",
+      "taglish": "Naiintindihan ko po.",
+      "english": "I understand.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "request_repeat": {
+      "tagalog": "Ulit po, pakiulit.",
+      "taglish": "Ulit po, pakiulit.",
+      "english": "Please repeat that.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "ask_name": {
+      "tagalog": "Ano po ang pangalan ninyo?",
+      "taglish": "Ano po ang pangalan ninyo?",
+      "english": "What is your name?",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "request_phone_call": {
+      "tagalog": "Tumawag po kayo ng tulong.",
+      "taglish": "Tumawag po kayo ng tulong.",
+      "english": "Please call for help.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    },
+    "express_okay": {
+      "tagalog": "Okay lang po ako.",
+      "taglish": "Okay lang po ako.",
+      "english": "I am okay.",
+      "tts_lang_code": {
+        "tagalog": "tl",
+        "taglish": "tl",
+        "english": "en"
+      }
+    }
+  }
+}
