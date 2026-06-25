@@ -40,6 +40,11 @@ When a Deaf Filipino walks into a clinic and needs to say *"Masakit po ito"* —
 **SenyaSalin exists to change that.**
 
 SenyaSalin is an **open-source, accessibility-first pipeline** that recognizes essential Filipino Sign Language (FSL) gestures through a standard webcam and converts them into natural **Taglish speech** in real time — no special hardware, no sign language knowledge required from the hearing person, and no cost to deploy.
+SenyaSalin is an **accessibility-focused web application** that converts essential Filipino Sign Language (FSL) gestures into understandable Taglish speech in real time.
+
+Built using computer vision and speech synthesis technologies, SenyaSalin helps bridge communication between Deaf and hearing Filipinos in high-impact situations such as healthcare consultations, emergency response, and public service interactions.
+
+Beyond the application itself, the project introduces an extensible gesture schema and reusable recognition pipeline that future developers and researchers can build upon.
 
 But SenyaSalin is not just a recognition app. Its primary contribution to the open-source community is its **extensible gesture schema and reproducible pipeline** — a foundation that researchers, NGOs, and developers can fork, extend, and build upon without starting from zero.
 
@@ -55,7 +60,7 @@ SenyaSalin outputs **contextual Taglish phrases** — the natural code-switched 
 | MEDICINE | `"MEDICINE"` | *"Kailangan ko po ng gamot."* |
 | PAIN | `"PAIN"` | *"Masakit po ito."* |
 
-This is not a cosmetic difference. Taglish is how Filipino service workers, nurses, teachers, and barangay staff actually speak. Outputting in their natural register makes the speech output **immediately usable** in real Philippine contexts — and directly contributes to Taglish speech technology, the explicit focus of this challenge.
+This is not a cosmetic difference. Taglish is widely used in everyday communication across many Filipino contexts, making generated speech more natural and immediately understandable to hearing users. Outputting in their natural register makes the speech output **immediately usable** in real Philippine contexts — and directly contributes to Taglish speech technology, the explicit focus of this challenge.
 
 ### Core Pipeline
 
@@ -108,9 +113,22 @@ Audio Output — spoken aloud for the hearing person nearby
 - 🔲 Regional FSL variant documentation (Manila, Cebu, Davao dialects differ)
 - 🔲 Browser-based version via TensorFlow.js (zero installation)
 - 🔲 Benchmark dataset for FSL-to-Taglish-speech evaluation
+- 🔲 Future multilingual support: Cebuano, Ilocano, Hiligaynon
 
-> Items removed from earlier roadmap: "Benchmark evaluation framework" has been re-scoped to a near-term goal rather than a long-term aspiration, since the gesture schema already lays the groundwork.
+---
+## 🎥 Demo Scenario
 
+A Deaf individual enters a clinic and needs assistance.
+
+1. The user performs the FSL sign for HELP.
+2. SenyaSalin detects the gesture through a webcam.
+3. The system generates the phrase:
+
+"Kailangan ko po ng tulong."
+
+4. The phrase is spoken aloud through the device speaker.
+
+This allows the hearing person nearby to immediately understand the user's request without requiring prior knowledge of Filipino Sign Language.
 ---
 
 ## 🤟 MVP Vocabulary — 15 Essential Signs
@@ -135,7 +153,7 @@ Signs were selected based on three criteria: **highest accessibility risk** (whe
 | 14 | CALL (phone) | "Tumawag po kayo ng tulong." | 🚨 Emergency |
 | 15 | OKAY / GOOD | "Okay lang po ako." | 💬 Communication |
 
-**Why 15 and not 50?** Because 15 signs executed reliably is more useful than 50 signs that misfire. Every sign in this vocabulary has been tested for gestural distinctiveness and verified to produce contextually appropriate Taglish output. Quality over quantity is a deliberate design decision, not a limitation.
+The initial vocabulary focuses on essential communication needs where timely understanding has the greatest impact, including emergency requests, healthcare interactions, and daily communication.
 
 ---
 
