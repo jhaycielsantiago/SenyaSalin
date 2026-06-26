@@ -429,5 +429,5 @@ This project aligns with the spirit of **RA 11106** (Filipino Sign Language Act)
 
 <p align="center">
   Made with ❤️ for the Filipino Deaf community. <br/>
-  <em>"Bawat kamay ay may salita." — Every hand has a voice.</em>
+  <em>"Bawat tinig ng Pilipino, patungo sa liwanag." — Every Filipino voice, into the light.</em>
 </p>
