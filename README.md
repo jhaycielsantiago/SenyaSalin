@@ -14,8 +14,6 @@
 [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-green.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-yellow.svg)](https://python.org)
 [![MediaPipe](https://img.shields.io/badge/MediaPipe-Hands-orange.svg)](https://mediapipe.dev)
-[![Model: YOLOv11n](https://img.shields.io/badge/Model-YOLOv11%20Nano-purple.svg)](https://docs.ultralytics.com)
-[![Dataset: 10,170 images](https://img.shields.io/badge/Dataset-10%2C170%20images-brightgreen.svg)](#-dataset)
 
 </div>
 
