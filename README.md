@@ -304,12 +304,12 @@ This project aligns with the spirit of **RA 11106** (Filipino Sign Language Act)
 
 **SenyaSalin** was developed by:
 
-| Name |
-|---|
-| Kent Garcia |
-| Denver Reyes |
-| Caleb Ezra Abiera |
-| Jhayciel Santiago |
+| Name | Role |
+|---|---|
+| Kent Garcia | Model Development |
+| Denver Reyes | Demo Video Production |
+| Caleb Ezra Abiera | Documentation |
+| Jhayciel Santiago | Documentation |
 
 > Built for **Tinig Sa Liwanag** — a hackathon project case advancing speech technology for Philippine languages.
 > Polytechnic University of the Philippines - San Pedro
