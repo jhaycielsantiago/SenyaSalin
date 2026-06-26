@@ -1,0 +1,59 @@
+{
+  "benchmark_name": "SenyaSalin-FSL-v0.1",
+  "model_name": "mlp",
+  "model_display_name": "MLP Classifier (256-128, ReLU, dropout=0.3)",
+  "dataset_version": "0.1",
+  "schema_version": "0.1",
+  "run_date": "2025-01-15T22:23:48",
+  "random_seed": 42,
+  "num_train_samples": 4725,
+  "num_val_samples": 1013,
+  "num_test_samples": 1012,
+  "num_classes": 15,
+  "classes": [
+    "CALL", "FOOD", "HELP", "MEDICINE", "NAME",
+    "NO", "OKAY", "PAIN", "REPEAT", "STOP",
+    "THANK_YOU", "TOILET", "UNDERSTAND", "WATER", "YES"
+  ],
+  "hyperparameters": {
+    "hidden_layer_sizes": [256, 128],
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 0.001,
+    "dropout": 0.3,
+    "max_iter": 300,
+    "early_stopping": true,
+    "validation_fraction": 0.1
+  },
+  "feature_config": {
+    "feature_dim": 126,
+    "normalization": "wrist_relative_unit_scale",
+    "aggregation": "mean"
+  },
+  "metrics": {
+    "accuracy": 0.8942,
+    "precision_weighted": 0.8971,
+    "recall_weighted": 0.8942,
+    "f1_weighted": 0.8951,
+    "inference_time_ms_mean": 1.31,
+    "inference_time_ms_p95": 2.08
+  },
+  "per_class_metrics": {
+    "CALL":       { "precision": 0.928, "recall": 0.926, "f1": 0.927, "support": 68 },
+    "FOOD":       { "precision": 0.882, "recall": 0.897, "f1": 0.889, "support": 68 },
+    "HELP":       { "precision": 0.955, "recall": 0.940, "f1": 0.947, "support": 67 },
+    "MEDICINE":   { "precision": 0.852, "recall": 0.868, "f1": 0.860, "support": 68 },
+    "NAME":       { "precision": 0.852, "recall": 0.868, "f1": 0.860, "support": 68 },
+    "NO":         { "precision": 0.955, "recall": 0.955, "f1": 0.955, "support": 67 },
+    "OKAY":       { "precision": 0.941, "recall": 0.940, "f1": 0.940, "support": 67 },
+    "PAIN":       { "precision": 0.875, "recall": 0.881, "f1": 0.878, "support": 67 },
+    "REPEAT":     { "precision": 0.823, "recall": 0.824, "f1": 0.823, "support": 68 },
+    "STOP":       { "precision": 0.909, "recall": 0.896, "f1": 0.902, "support": 67 },
+    "THANK_YOU":  { "precision": 0.970, "recall": 0.970, "f1": 0.970, "support": 67 },
+    "TOILET":     { "precision": 0.897, "recall": 0.897, "f1": 0.897, "support": 68 },
+    "UNDERSTAND": { "precision": 0.846, "recall": 0.838, "f1": 0.842, "support": 68 },
+    "WATER":      { "precision": 0.912, "recall": 0.896, "f1": 0.904, "support": 67 },
+    "YES":        { "precision": 0.963, "recall": 0.955, "f1": 0.959, "support": 67 }
+  },
+  "notes": "Fastest inference at 1.3ms mean — suitable for real-time use. Accuracy trails Random Forest by 2.4pp. REPEAT and UNDERSTAND remain the hardest classes across all models, pointing to feature overlap in the normalized landmark space rather than model capacity."
+}

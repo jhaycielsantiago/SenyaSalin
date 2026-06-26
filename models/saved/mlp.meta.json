@@ -1,0 +1,30 @@
+{
+  "model_name": "mlp",
+  "pipeline_version": "0.1",
+  "schema_version": "0.1",
+  "train_date": "2025-01-15T22:23:48",
+  "class_names": [
+    "CALL", "FOOD", "HELP", "MEDICINE", "NAME",
+    "NO", "OKAY", "PAIN", "REPEAT", "STOP",
+    "THANK_YOU", "TOILET", "UNDERSTAND", "WATER", "YES"
+  ],
+  "num_classes": 15,
+  "feature_dim": 126,
+  "normalization_strategy": "wrist_relative_unit_scale",
+  "aggregation": "mean",
+  "num_train_samples": 4725,
+  "num_val_samples": 1013,
+  "val_accuracy": 0.8915,
+  "hyperparameters": {
+    "hidden_layer_sizes": [256, 128],
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 0.001,
+    "dropout": 0.3,
+    "max_iter": 300,
+    "early_stopping": true,
+    "validation_fraction": 0.1
+  },
+  "random_seed": 42,
+  "trained_by": "training.train (python -m training.train --model mlp --seed 42)"
+}
